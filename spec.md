@@ -12,7 +12,7 @@ Specs:
 - [ ] Include signup (how e.g. Devise)
 - [ ] Include login (how e.g. Devise)
 - [ ] Include logout (how e.g. Devise)
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
+- [x] Include third party signup/login (how e.g. Devise/OmniAuth) : included 'omniauth-rails_csrf_protection' gem to help use third-party apis, included 'omniauth-facebook' gem to work with facebook specifically
 - [ ] Include nested resource show or index (URL e.g. users/2/recipes)
 - [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
