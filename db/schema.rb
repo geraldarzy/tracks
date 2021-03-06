@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_03_06_185229) do
     t.string "title"
     t.string "content"
     t.integer "station_id"
-    t.integer "owner_id"
+    t.integer "user_id"
   end
 
   create_table "stations", force: :cascade do |t|
