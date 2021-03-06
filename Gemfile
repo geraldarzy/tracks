@@ -25,6 +25,16 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+#omniauth v2 difference is you use a post request instead of a get when going to /auth/:provider
+gem 'omniauth-rails_csrf_protection'
+
+#omniauth strategy/provider
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+
+#allows us to declare .env variables properly
+gem 'dotenv-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
