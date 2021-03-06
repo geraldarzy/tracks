@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2021_03_06_204456) do
     t.string "name"
     t.string "address"
     t.string "picture"
-    t.integer "track_id"
   end
 
   create_table "track_stations", force: :cascade do |t|

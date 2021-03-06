@@ -4,7 +4,6 @@ class CreateStation < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :address
       t.string :picture
-      t.integer :track_id
     end
   end
 end
