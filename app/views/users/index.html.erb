@@ -1,0 +1,8 @@
+<h2>Account:</h2>
+<div class = 'list'>
+    <ul>
+        <%current_user.account_info.each do |key,value|%>
+            <li><%=key%>: <%=value%></li>
+        <%end%>
+    </ul>
+</div>
