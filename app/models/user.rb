@@ -15,4 +15,7 @@ class User < ActiveRecord::Base
   #show stations a user has commented on
   has_many :stations, through: :posts
 
+  def account_info
+    {"First Name":first_name, "Last Name":last_name, "Username":username, "E-mail":email}
+  end
 end
