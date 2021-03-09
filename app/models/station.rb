@@ -13,7 +13,7 @@ class Station < ActiveRecord::Base
     end
 
     def ghosttown?
-
+        self.users_here_within_24hrs.empty?
     end
 
 end
