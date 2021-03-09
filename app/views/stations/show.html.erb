@@ -1,3 +1,15 @@
 <h1><%=@station.name%></h1>
 <p><%=@station.address%></p>
+<div>
+    Tracks at this station:
+</div>
+<ul>
+    <%@station.posts.each do |post|%>
+        <li>
+            <h3><%=post.title%></h3>
+            <p><%=post.description%></p>
+        </li>
 
+    <%end%>
+
+</ul>
