@@ -9,7 +9,7 @@
 <ul>
     <%@station.posts.each do |post|%>
         <li>
-            <h3><%=link_to post.title, station_post_path(post)%></h3>
+            <h3><%=link_to post.title, station_post_path(@station,post)%></h3>
             <p><%=post.description%></p>
             <p><%=post.relative_time%></p>
         </li>
@@ -17,7 +17,7 @@
 </ul>
 
 <%if @station.ghosttown?%>
-    <h3>"No recent activity yet for today"</h3>
+    <h3>No recent activity yet for today</h3>
 <%else%>
     <ul>
         <h3>Recent activity here at <%=@station.name%> :</h3>
