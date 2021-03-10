@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users 
 
   resources :stations, only: [:index,:show] do
-    resources :posts, only: [:show,:new]
+    resources :posts, only: [:show,:new,:create]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
