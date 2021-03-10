@@ -1,18 +1,27 @@
 <%=form_for [@station,@post] do |f|%>
-    <%=f.label :title, "Title:"%> <br>
-    <%=f.text_field :title%> 
-    
+
+    <div class ="<%= ' field_with_errors' if @post.errors[:title].any? %>" >
+        <%=f.label :title, "Title:"%> <br>
+        <%=@post.errors.full_messages_for(:title)[0]%>
+        <%=f.text_field :title%> 
+    </div>
+
     <br>
 
-    <%=f.label :description, "Sub-Headline:"%> <br>
-    <%=f.text_field :description%> 
-    
+    <div class ="<%= ' field_with_errors' if @post.errors[:description].any? %>" >
+        <%=f.label :description, "Sub-Headline:"%> <br>
+        <%=@post.errors.full_messages_for(:description)[0]%>
+        <%=f.text_field :description%> 
+    </div>
     <br>
     
-    <%=f.label :content, "What's on your mind?"%> <br>
-    <%=f.text_area :content%> 
-    
+    <div class ="<%= ' field_with_errors' if @post.errors[:content].any? %>" >
+        <%=f.label :content, "What's on your mind?"%> <br>
+        <%=@post.errors.full_messages_for(:content)[0]%>
+        <%=f.text_area :content%> 
+    </div>
     <br>
     
     <%=f.submit%>
+
 <%end%>
