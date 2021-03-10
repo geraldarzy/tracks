@@ -1,0 +1,5 @@
+<ul>
+    <%Track.all.each do |track|%>
+        <li><h1><%=link_to track.name, track_path(track)%></h1></li>
+    <%end%>
+</ul>
