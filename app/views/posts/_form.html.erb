@@ -1,0 +1,18 @@
+<%=form_for [@station,@post] do |f|%>
+    <%=f.label :title, "Title:"%> <br>
+    <%=f.text_field :title%> 
+    
+    <br>
+
+    <%=f.label :description, "Sub-Headline:"%> <br>
+    <%=f.text_field :description%> 
+    
+    <br>
+    
+    <%=f.label :content, "What's on your mind?"%> <br>
+    <%=f.text_area :content%> 
+    
+    <br>
+    
+    <%=f.submit%>
+<%end%>
