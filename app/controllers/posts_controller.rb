@@ -9,4 +9,8 @@ class PostsController < ApplicationController
             redirect_to (station_path(station))
         end
     end
+
+    def new
+
+    end
 end
