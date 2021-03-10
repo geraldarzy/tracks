@@ -1,0 +1,7 @@
+<ul>
+    <%@track.stations.each do |station|%>
+        <li>
+            <%=link_to station.name, station_path(station)%>
+        </li>
+    <%end%>
+</ul>
