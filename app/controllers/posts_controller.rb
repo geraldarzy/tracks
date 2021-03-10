@@ -11,6 +11,8 @@ class PostsController < ApplicationController
     end
 
     def new
-
+        @station = Station.find_by(id: params[:station_id])
+        @post = @station.posts.new(user_id:current_user.id)
     end
+
 end
