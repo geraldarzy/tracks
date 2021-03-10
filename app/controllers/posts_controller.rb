@@ -18,8 +18,12 @@ class PostsController < ApplicationController
     def create
         set_station
         params[:post][:user_id] = current_user.id
-        @post = @station.posts.create(post_params(:title,:description,:content,:station_id,:user_id))
-        redirect_to "/stations/#{@station.id}"
+        @post = @station.posts.new(post_params(:title,:description,:content,:station_id,:user_id))
+        if @post.save
+            redirect_to "/stations/#{@station.id}"
+        else
+            render "new"
+        end
     end
 
     private
