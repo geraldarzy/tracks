@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get "/" => "application#home", as: "home"
   devise_for :users, controllers: { registrations: 'registrations', omniauth_callbacks: 'omniauth' } 
-  resources :users
+  resources :users, only: [:index]
 
   resources :tracks, only: [:index,:show]
 
