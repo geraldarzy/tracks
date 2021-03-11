@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'tracks#index'
-
+  get "/" => "application#home", as: "home"
   devise_for :users, controllers: { registrations: 'registrations', omniauth_callbacks: 'omniauth' } 
-  resources :users 
+  resources :users
 
   resources :tracks, only: [:index,:show]
 
