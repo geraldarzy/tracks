@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :tracks, only: [:index,:show]
 
   resources :stations, only: [:index,:show] do
-    resources :posts, only: [:show,:new,:create]
+    resources :posts, only: [:show,:new,:create] do
+      resources :comments, only: [:show,:new,:create]
+    end
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
