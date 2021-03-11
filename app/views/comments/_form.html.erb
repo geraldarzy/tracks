@@ -1,0 +1,9 @@
+<%=form_for [@comment.post.station, @comment.post, @comment] do |f|%>
+    <div class="<%= ' field_with_errors' if @comment.errors[:content].any? %>" >
+        <%=f.label :content, "Comment:"%> <br>
+        <%=@comment.errors.full_messages_for(:content)[0]%>
+        <%=f.text_field :content%> 
+    </div>
+
+    <%=f.submit "Post comment"%>
+<%end%>
