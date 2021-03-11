@@ -1,6 +1,6 @@
 <h1><%=@post.title%></h1>
 <h4>Location: <%=@post.station.name%></h4>
-<p><%=@post.relative_time%> by <%=link_to @post.user.username, user_path(@post.user)%></p>
+<p><%=@post.relative_time%> by <%=@post.user.username%></p>
 <br>
 <div>
     <%=@post.content%>
