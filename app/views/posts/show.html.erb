@@ -6,8 +6,10 @@
     <%=@post.content%>
 </div>
 <br>
-<h3>Comments:</h3>
-<%= render 'comments/index'%>
 
+<%if @post.comments.present?%>
+    <h3>Comments:</h3>
+    <%= render 'comments/index'%>
+<%end%>
 <br>
 <%=link_to 'Comment', new_station_post_comment_path(@post.station, @post)%>
