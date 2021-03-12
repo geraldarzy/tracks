@@ -8,3 +8,6 @@
 <br>
 <h3>Comments:</h3>
 <%= render 'comments/index'%>
+
+<br>
+<%=link_to 'Comment', new_station_post_comment_path(@post.station, @post)%>
