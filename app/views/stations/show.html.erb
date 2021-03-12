@@ -6,15 +6,7 @@
         <%=track.name%>
     <%end%>
 </div>
-<ul>
-    <%@station.posts.each do |post|%>
-        <li>
-            <h3><%=link_to post.title, station_post_path(@station,post)%></h3>
-            <p><%=post.description%></p>
-            <p><%=post.relative_time%> by: <%=post.user.username%></p>
-        </li>
-    <%end%>
-</ul>
+<%=render 'posts/index'%>
 
 <%if @station.ghosttown?%>
     <h4>No recent activity yet for today</h4>
