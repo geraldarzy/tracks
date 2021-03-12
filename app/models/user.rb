@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:facebook, :github, :google_oauth2]
+         :omniauthable, omniauth_providers: [:github, :google_oauth2]
 
   validates :username, presence: true
   validates :username, uniqueness: true
