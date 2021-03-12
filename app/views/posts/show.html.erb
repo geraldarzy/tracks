@@ -5,3 +5,10 @@
 <div>
     <%=@post.content%>
 </div>
+<br>
+<h3>Comments:</h3>
+<ul>
+    <%@post.comments.each do |comment|%>
+        <li><%=comment.content%></li>
+    <%end%>
+</ul>
