@@ -1,5 +1,8 @@
 <ul>
     <%@post.comments.each do |comment|%>
-        <li><%=comment.content%></li>
+        <li>
+            <%=comment.content%> <br>
+            <p>-<%=comment.user.username%></p>
+        </li>
     <%end%>
 </ul>
