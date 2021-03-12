@@ -12,6 +12,14 @@ class Station < ActiveRecord::Base
         self.posts_made_within_24hrs.map {|p|p.user}.uniq
     end
 
+     def users_here_within_1hr
+        self.posts_made_within_1hr.map {|p|p.user}.uniq
+    end
+
+    def posts_made_within_1hr
+        self.posts.where(created_at: Time.now - 1*60*60..Time.now)
+    end
+
     def ghosttown?
         self.users_here_within_24hrs.empty?
     end
