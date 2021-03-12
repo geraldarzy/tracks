@@ -17,11 +17,11 @@
 </ul>
 
 <%if @station.ghosttown?%>
-    <h3>No recent activity yet for today</h3>
+    <h4>No recent activity yet for today</h4>
 <%else%>
     <ul>
-        <h3>Recent activity here at <%=@station.name%> :</h3>
-        <%@station.users_here_within_24hrs.each do |u|%>
+        <h4>Recent activity here at <%=@station.name%> :</h4>
+        <%@station.users_here_within_1hr.each do |u|%>
             <li><%=u.username%></li>
         <%end%>
     </ul>
