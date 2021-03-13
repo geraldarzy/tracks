@@ -1,6 +1,6 @@
 <%Track.all.each do |track|%>
-    <div class="card" style="width: 18rem;">
-        <img src="<%=track.pic%>" class="card-img-top" alt="<%=track.name%>'s logo">
+    <div class="card" style="width: 10rem;">
+    <%=link_to image_tag(track.pic, size: "40x40", alt: "#{track.name}'s logo"), track_path(track)%>
         <div class="card-body">
             <h5 class="card-title"><%=link_to track.name, track_path(track)%></h5>
         </div>
