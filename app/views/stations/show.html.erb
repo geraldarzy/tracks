@@ -3,7 +3,7 @@
 <div>
     Tracks at this station: 
     <%@station.tracks.each do |track|%>
-        <%=track.name%>
+        <%=link_to image_tag(track.pic, size: "40x40", alt: "#{track.name}'s logo"), track_path(track)%>
     <%end%>
 </div>
 <%=render 'posts/index'%>
