@@ -1,5 +1,8 @@
-<ul>
-    <%Track.all.each do |track|%>
-        <li><h1><%=link_to track.name, track_path(track)%></h1></li>
-    <%end%>
-</ul>
+<%Track.all.each do |track|%>
+    <div class="card" style="width: 18rem;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/NYCS-bull-trans-R.svg/400px-NYCS-bull-trans-R.svg.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><%=link_to track.name, track_path(track)%></h5>
+        </div>
+    </div>
+<%end%>
