@@ -1,9 +1,11 @@
 <ul>
     <%@station.posts.each do |post|%>
         <li>
-            <h3><%=link_to post.title, station_post_path(@station,post)%></h3>
-            <p><%=post.description%></p>
-            <p><%=post.relative_time%> by: <%=post.user.username%></p>
+            <div class="card my-3" style="width: 18rem;">
+                <h3><%=link_to post.title, station_post_path(@station,post)%></h3>
+                <p><%=post.description%></p>
+                <p><%=post.relative_time%> by: <%=post.user.username%></p>
+            </div>
         </li>
     <%end%>
 </ul>
