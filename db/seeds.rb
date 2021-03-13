@@ -27,7 +27,7 @@ require 'csv'
 
 stations = CSV.parse(File.read("Stations.csv"), headers: true)
 stations.each do |x|
-    s = Station.create(name:x["Stop Name"])
+    s = Station.create_or_find_by(name:x["Stop Name"])
     x["Daytime Routes"].split(" ").each do |track|
         s.tracks << Track.find_or_create_by(name: track + " Track")
     end
