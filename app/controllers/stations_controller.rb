@@ -1,7 +1,12 @@
 class StationsController < ApplicationController
     #before_action :authenticate_user!
     def index
-        @stations = Station.all
+        stations = Station.search_by_name(params[:search])
+        if stations
+            @stations = stations
+        else
+            @stations = Station.all
+        end
     end
 
     def show
