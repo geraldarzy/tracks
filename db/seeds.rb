@@ -132,10 +132,10 @@ naruto_characters = []
     end
 end
 
-#266 - Grand Ave
+#Grand Ave
 10.times do
     user = smash_characters.sample
-    station = Station.find_by(id: 266)
+    station = Station.find_by(name:"Grand Av-Newtown")
     post_info ={
         station_id: station.id,
         user_id: user.id,
@@ -155,7 +155,9 @@ end
         c2.save
     end
 end
-Post.create(title:"I saw the cutest dogs at Grand ave today!",description: "the good doggo was so cute and so polite!", content: "I was just minding my business on the R today. I was on my way to the city to go meet up with my friends. THEN I SAW HIM. When I tell you that he was the cutest dog ever, I MEAN IT. He was an aussie and he had the cutest tan spots all over his black and white hair. And yes I said hair! His coat of fur was so hair-like and I bet he must feel great when he cuddles with you. Ahh I wanna get myself an aussie friend so bad!", station_id: 266, user_id:naruto_characters.sample.id)
-Post.create(title:"I dropped my house keys this morning!",description: "set of keys with a strawberry keychain! call me at 646-029-1234", content: "Hey guys! Dropped my keys today at grand ave! I was on my way to work rushing early this morning. I got to work on time and it was an average day. Until I got home after work (10 whole hours later btw!!) and realized that I didn't have my keys! Im assuming I dropped them when I was running around the station earlier today trying to catch the R :( I went back to the station to look around but could not find it, the booth worker also didnt have it :( If you have it please give me a call! Thank you!!! ", station_id: 266, user_id:naruto_characters.sample.id)
-Post.create(title:"Guess who I saw at Grand Ave!!!!",description: "saw a famous person playing the trumpet!", content: "Craziest thing happened! I was walking down the stairs when I heard someone playing the trumpet. It sounded amazing, I can't even describe it properly. I go down to investigate and turns out it was BILLY JOEL!", station_id: 266, user_id:smash_characters.sample.id)
-Post.create(title:"I saw the cutest PUG",description: "the good puggo was so cute and so polite!! his name is Popoy and he gave me a fist bump!", content: "I was just minding my business on the R today. I was on my way to the city to go meet up with my friends. THEN I SAW HIM. When I tell you that he was the cutest dog ever, I MEAN IT. He was an aussie and he had the cutest tan spots all over his black and white hair. And yes I said hair!! His coat of fur was so hair-like and I bet he must feel great when he cuddles with you. Ahh I wanna get myself an aussie friend so bad!", station_id: 266, user_id:naruto_characters.sample.id)
+
+grand = Station.find_by(name:"Grand Av-Newtown")
+Post.create(title:"I saw the cutest dogs at Grand ave today!",description: "the good doggo was so cute and so polite!", content: "I was just minding my business on the R today. I was on my way to the city to go meet up with my friends. THEN I SAW HIM. When I tell you that he was the cutest dog ever, I MEAN IT. He was an aussie and he had the cutest tan spots all over his black and white hair. And yes I said hair! His coat of fur was so hair-like and I bet he must feel great when he cuddles with you. Ahh I wanna get myself an aussie friend so bad!", station_id: grand.id, user_id:naruto_characters.sample.id)
+Post.create(title:"I dropped my house keys this morning!",description: "set of keys with a strawberry keychain! call me at 646-029-1234", content: "Hey guys! Dropped my keys today at grand ave! I was on my way to work rushing early this morning. I got to work on time and it was an average day. Until I got home after work (10 whole hours later btw!!) and realized that I didn't have my keys! Im assuming I dropped them when I was running around the station earlier today trying to catch the R :( I went back to the station to look around but could not find it, the booth worker also didnt have it :( If you have it please give me a call! Thank you!!! ", station_id: grand.id, user_id:naruto_characters.sample.id)
+Post.create(title:"Guess who I saw at Grand Ave!!!!",description: "saw a famous person playing the trumpet!", content: "Craziest thing happened! I was walking down the stairs when I heard someone playing the trumpet. It sounded amazing, I can't even describe it properly. I go down to investigate and turns out it was BILLY JOEL!", station_id: grand.id, user_id:smash_characters.sample.id)
+Post.create(title:"I saw the cutest PUG",description: "the good puggo was so cute and so polite!! his name is Popoy and he gave me a fist bump!", content: "I was just minding my business on the R today. I was on my way to the city to go meet up with my friends. THEN I SAW HIM. When I tell you that he was the cutest dog ever, I MEAN IT. He was an aussie and he had the cutest tan spots all over his black and white hair. And yes I said hair!! His coat of fur was so hair-like and I bet he must feel great when he cuddles with you. Ahh I wanna get myself an aussie friend so bad!", station_id: grand.id, user_id:naruto_characters.sample.id)
