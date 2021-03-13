@@ -24,4 +24,8 @@ class Station < ActiveRecord::Base
         self.users_here_within_24hrs.empty?
     end
 
+    def self.random_name
+        self.all.sample.name
+    end
+
 end
