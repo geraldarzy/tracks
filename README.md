@@ -32,7 +32,7 @@ Clone the Repository into your computer.
 r- un `rails db:migrate` - runs the migration files needed to create your database table
 <br><br>
 - run `rails db:seed` - seeds the database both with dummy seed data and also with the needed tracks and stations from a csv file<br>
-(to remove dummy data but keep the needed NYC Subway csv data go [here](youtube.com))
+(to remove dummy data but keep the needed NYC Subway csv data, scroll to the [bottom](#deletefakedata))
 <br><br>
 - run `rails s` - short for 'rails server' starts up your server, default url is http://localhost:3000/
 <br><br>
@@ -56,3 +56,10 @@ To do that follow this. <br>
     google_client_secret: #paste you client secret here
 ```
 Now you can close the file and your credentials should save inside. To check, you can run `rails credentials:show` to peek inside of the credentials.yml file. 
+
+<br><br>
+<strong>Getting Rid of the Fake Data<a name="deletefakedata"></a></strong> <br>
+To remove the fake seed data and keep the data regarding each track and station.
+- Delete the 'seeds.rb' file located in the 'db' directory
+- Rename the file '_seeds.rb' to 'seeds.rb'
+- run `rails db:reset` to clear the database of data and re-seed the file with the new seed file that we just renamed.
