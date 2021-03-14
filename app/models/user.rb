@@ -16,6 +16,11 @@ class User < ActiveRecord::Base
   #show stations a user has commented on
   has_many :stations, through: :posts
 
+  def home_station=(station_id)
+    home_station = Station.find(station_id)
+    save
+  end
+
   def self.create_from_provider_data(provider_data)
     where(provider: provider_data.provider, uid: provider_data.uid).first_or_create  do |user|
       user.email = provider_data.info.email
@@ -25,6 +30,6 @@ class User < ActiveRecord::Base
   end
 
   def account_info
-    {"First Name":first_name, "Last Name":last_name, "Username":username, "E-mail":email}
+    {"First Name":first_name, "Last Name":last_name, "Username":username, "E-mail":email, "Home Station":home_station}
   end
 end
