@@ -46,6 +46,8 @@
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
+  <%=collection_select(:user, :home_station, Station.all, :id, :name, prompt: "Choose a home station")%>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
