@@ -37,3 +37,4 @@ yarn-debug.log*
 .env
 /db/seeds.rb
 todo.md
+cloudinary.yml
