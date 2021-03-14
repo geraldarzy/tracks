@@ -52,11 +52,13 @@ track_logos = {
 }
 stations = CSV.parse(File.read("Stations.csv"), headers: true)
 stations.each do |row|
-    station = Station.create_or_find_by(name:row["Stop Name"])
+    station = Station.find_or_create_by(name:row["Stop Name"])
     row["Daytime Routes"].split(" ").each do |track|
-        station.tracks << t = Track.find_or_create_by(name: track + " Track")
-        t.pic = track_logos[:"#{track}"]
-        t.save
+        if !(track=="S")
+            station.tracks << t = Track.find_or_create_by(name: track + " Track")
+            t.pic = track_logos[:"#{track}"]
+            t.save
+        end
     end
 end
 
