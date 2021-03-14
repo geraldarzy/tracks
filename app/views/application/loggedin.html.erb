@@ -1,5 +1,4 @@
-<h1>LOGGED IN DO SOMETHING HERE</h1>
-
+<br>
 <%= form_tag stations_path, method: :get do %>
     <%= text_field_tag 'search', params[:hello], placeholder: "Station Name (e.g. #{Station.random_name})" %>
     <%= submit_tag 'Search!' %>
